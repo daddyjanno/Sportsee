@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Source: components/UserActivity/index.jsx</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Source: components/UserActivity/index.jsx</h1>
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>import { useContext } from 'react'
+import { useParams } from 'react-router'
+import colors from '../../utils/style/colors'
+import { UserActivityTooltip } from '../UserActivityTooltype/index'
+import {
+    BarChart,
+    XAxis,
+    YAxis,
+    ResponsiveContainer,
+    CartesianGrid,
+    Tooltip,
+    Bar,
+} from 'recharts'
+import {
+    BarChartMainContainer,
+    ColorSample,
+    Container,
+    Info,
+    LegendContainer,
+    Text,
+    Title,
+} from '../../styles/UserActivity'
+import { DataContext } from '../../utils/context'
+import { useFetch } from '../../utils/hooks'
+
+/** Renders the charts for user's activity, regarding user's weight and burned calories
+ *
+ * @returns {React.JSX}
+ */
+function UserActivity() {
+    const { isMockedData } = useContext(DataContext)
+    const { id } = useParams()
+
+    const { data } = useFetch(isMockedData, 'USER_ACTIVITY', id)
+
+    return (
+        &lt;BarChartMainContainer>
+            &lt;Container>
+                &lt;Title>Activité quotidienne&lt;/Title>
+                &lt;LegendContainer>
+                    &lt;Info>
+                        &lt;ColorSample color={colors.primary} />
+                        &lt;Text>Poids (kg)&lt;/Text>
+                    &lt;/Info>
+                    &lt;Info>
+                        &lt;ColorSample color="black" />
+                        &lt;Text>Calories brûlées (kCal)&lt;/Text>
+                    &lt;/Info>
+                &lt;/LegendContainer>
+            &lt;/Container>
+            &lt;ResponsiveContainer width="100%" height={300}>
+                &lt;BarChart
+                    width={500}
+                    height={300}
+                    data={data}
+                    barGap={8}
+                    barCategoryGap={2}
+                    barSize={7}
+                    radius={[50, 50, 0, 0]}
+                    margin={{
+                        top: 5,
+                        right: 30,
+                        left: 20,
+                        bottom: 5,
+                    }}
+                >
+                    &lt;CartesianGrid vertical={false} strokeDasharray="3 3" />
+                    &lt;XAxis
+                        dataKey="index"
+                        tickLine={false}
+                        tick={{ fontSize: 14, stroke: '#9B9EAC' }}
+                        dy={15}
+                    />
+                    &lt;YAxis
+                        dataKey="kilogram"
+                        yAxisId="kilogram"
+                        orientation="right"
+                        type="number"
+                        domain={['dataMin - 2', 'dataMax + 1']}
+                        tickCount={5}
+                        tick={{ fontSize: 14 }}
+                        axisLine={false}
+                        tickLine={false}
+                    />
+                    &lt;YAxis
+                        dataKey="calories"
+                        yAxisId="calories"
+                        orientation="right"
+                        type="number"
+                        domain={['dataMin - 20', 'dataMax + 10']}
+                        hide="true"
+                    />
+                    &lt;Tooltip content={&lt;UserActivityTooltip />} />
+                    &lt;Bar
+                        dataKey="kilogram"
+                        yAxisId="kilogram"
+                        fill="black"
+                        stroke="black"
+                        radius={[50, 50, 0, 0]}
+                        barSize={7}
+                    />
+                    &lt;Bar
+                        dataKey="calories"
+                        yAxisId="calories"
+                        fill={colors.primary}
+                        stroke={colors.primary}
+                        radius={[50, 50, 0, 0]}
+                        barSize={7}
+                    />
+                &lt;/BarChart>
+            &lt;/ResponsiveContainer>
+        &lt;/BarChartMainContainer>
+    )
+}
+
+export default UserActivity
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#AverageSessions">AverageSessions</a></li><li><a href="global.html#AverageSessionsTooltip">AverageSessionsTooltip</a></li><li><a href="global.html#Card">Card</a></li><li><a href="global.html#Homepage">Homepage</a></li><li><a href="global.html#KeyData">KeyData</a></li><li><a href="global.html#Switch">Switch</a></li><li><a href="global.html#User">User</a></li><li><a href="global.html#UserActivity">UserActivity</a></li><li><a href="global.html#UserActivityTooltip">UserActivityTooltip</a></li><li><a href="global.html#UserInfos">UserInfos</a></li><li><a href="global.html#UserPerformance">UserPerformance</a></li><li><a href="global.html#UserScore">UserScore</a></li><li><a href="global.html#useFetch">useFetch</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 4.0.2</a> on Mon Nov 06 2023 16:48:34 GMT+0100 (Central European Standard Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
