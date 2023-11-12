@@ -45,12 +45,13 @@ function AverageSessions() {
                         tick={{ fontSize: 12, fontWeight: 500 }}
                         axisLine={false}
                         tickLine={false}
+                        // tickMargin={20}
                     />
                     <YAxis
                         dataKey="sessionLength"
                         domain={[0, 'dataMax + 10']}
                         hide={true}
-                        padding={{ top: 0, bottom: 20 }}
+                        padding={{ top: 0, bottom: 40 }}
                     />
                     <Tooltip
                         content={<AverageSessionsTooltip />}

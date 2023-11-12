@@ -4,8 +4,7 @@ import PropTypes from 'prop-types'
 export const DataContext = createContext()
 
 export const ContextProvider = ({ children }) => {
-    const [isMockedData, setMockedData] = useState(false)
-    console.log(isMockedData)
+    const [isMockedData, setMockedData] = useState(true)
     const toggleMockedData = () => {
         setMockedData(!isMockedData)
     }

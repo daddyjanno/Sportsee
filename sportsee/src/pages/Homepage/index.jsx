@@ -10,7 +10,6 @@ import Switch from '../../components/Switch'
  */
 function Homepage() {
     const { isMockedData, toggleMockedData } = useContext(DataContext)
-    console.log(isMockedData)
 
     return (
         <Container>
