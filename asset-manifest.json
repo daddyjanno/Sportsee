@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.js": "/Sportsee/static/js/main.4822ab60.js",
+    "main.js": "/Sportsee/static/js/main.aee1304c.js",
     "static/media/logo.png": "/Sportsee/static/media/logo.f51f80d54ff24e9ec05e.png",
     "index.html": "/Sportsee/index.html",
-    "main.4822ab60.js.map": "/Sportsee/static/js/main.4822ab60.js.map"
+    "main.aee1304c.js.map": "/Sportsee/static/js/main.aee1304c.js.map"
   },
   "entrypoints": [
-    "static/js/main.4822ab60.js"
+    "static/js/main.aee1304c.js"
   ]
 }
