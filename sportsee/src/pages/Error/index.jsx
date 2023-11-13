@@ -13,7 +13,7 @@ function Error() {
             <StyledText>
                 Oups! La page que vous demandez n'existe pas.
             </StyledText>
-            <StyledLink to="/">Retourner sur la page d’accueil</StyledLink>
+            <StyledLink to="/Home">Retourner sur la page d’accueil</StyledLink>
         </StyledContainer>
     )
 }
