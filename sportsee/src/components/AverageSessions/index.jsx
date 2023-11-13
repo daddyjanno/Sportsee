@@ -48,7 +48,7 @@ function AverageSessions() {
                     />
                     <YAxis
                         dataKey="sessionLength"
-                        domain={[0, 'dataMax + 10']}
+                        domain={[0, 'dataMax + 20']}
                         hide={true}
                         padding={{ top: 0, bottom: 40 }}
                     />

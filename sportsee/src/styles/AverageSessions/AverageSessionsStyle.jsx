@@ -20,6 +20,7 @@ const LineChartTitle = styled.h3`
     top: 10px;
     color: rgba(255, 255, 255, 0.75);
     /* padding-top: 20px; */
+    /* padding-bottom: 10px; */
     font-weight: normal;
     font-size: 15px;
     /* background-color: transparent; */
