@@ -15,10 +15,10 @@ function Homepage() {
         <Container>
             <h2>Select user</h2>
             <UserContainer>
-                <NavLink to="user/12">
+                <NavLink to="/user/12">
                     <User>Karl Dovineau</User>
                 </NavLink>
-                <NavLink to="user/18">
+                <NavLink to="/user/18">
                     <User>Cecilia Ratorez</User>
                 </NavLink>
             </UserContainer>

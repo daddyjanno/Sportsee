@@ -20,7 +20,7 @@ root.render(
                 <Header />
                 <Sidebar />
                 <Routes>
-                    <Route path="/" element={<Homepage />} />
+                    <Route path="/Home" element={<Homepage />} />
                     <Route path="user/:id" element={<User />} />
                     <Route path="*" element={<Error />} />
                 </Routes>

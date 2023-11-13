@@ -7,7 +7,7 @@ function Header() {
         <Head>
             <Nav>
                 <Logo src={logo} alt="logo Sportsee" />
-                <NavLink to="/">Accueil</NavLink>
+                <NavLink to="/Home">Accueil</NavLink>
                 <NavLink>Profil</NavLink>
                 <NavLink>Réglages</NavLink>
                 <NavLink>Communauté</NavLink>
