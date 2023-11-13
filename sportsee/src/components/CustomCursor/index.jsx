@@ -9,9 +9,9 @@ const CustomCursor = (props) => {
             fill="rgba(0,0,0,0.1)"
             stroke="rgba(0,0,0,0.1)"
             x={x}
-            y={y}
+            y={y / 3}
             width={width}
-            height={height}
+            height={height * 2}
         />
     )
 }

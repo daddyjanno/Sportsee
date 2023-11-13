@@ -31,7 +31,6 @@ function AverageSessions() {
 
     return (
         <LineChartMainContainer>
-            <LineChartTitle>Durée moyenne des sessions</LineChartTitle>
             <ResponsiveContainer>
                 <LineChart data={data}>
                     <CartesianGrid
@@ -67,6 +66,7 @@ function AverageSessions() {
                     />
                 </LineChart>
             </ResponsiveContainer>
+            <LineChartTitle>Durée moyenne des sessions</LineChartTitle>
         </LineChartMainContainer>
     )
 }
